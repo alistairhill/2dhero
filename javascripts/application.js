@@ -28,20 +28,12 @@ function Controller(view, model) {
 
 Controller.prototype = {
   bindEvents: function(){
-
 		$(document).keydown(function(){
+			var currentPosition = $('.long_grass').position().left
 			if (event.keyIdentifier == "Right"){
-				console.log('Moving right!')
-				var newPosition = $('.long_grass').position().left - 20
-				$('.long_grass').css('left', newPosition)
-			}
-		})
-
-		$(document).keydown(function(){
-			if (event.keyIdentifier == "Left"){
-				console.log('Moving left!')
-				var newPosition = $('.long_grass').position().left + 20
-				$('.long_grass').css('left', newPosition)
+				$('.long_grass').css('left', currentPosition -20)
+			} else if(event.keyIdentifier == "Left"){
+				$('.long_grass').css('left', currentPosition +20)
 			}
 		})
   }
