@@ -29,11 +29,13 @@ function Controller(view, model) {
 Controller.prototype = {
   bindEvents: function(){
 		$(document).keydown(function(){
-			var currentPosition = $('.long_grass').position().left
-			if (event.keyIdentifier == "Right"){
-				$('.long_grass').css('left', currentPosition -20)
-			} else if(event.keyIdentifier == "Left"){
-				$('.long_grass').css('left', currentPosition +20)
+			var ground = $('.long_grass')
+			var currentPosition = ground.position().left
+			var maxRightPosition = -Math.abs($('.long_grass').width() - $('#game_view').width())
+			if (event.keyIdentifier == "Right" && currentPosition > maxRightPosition){
+					ground.css('left', currentPosition -20)
+			} else if(event.keyIdentifier == "Left" && currentPosition < 0){
+					ground.css('left', currentPosition +20)
 			}
 		})
   }
