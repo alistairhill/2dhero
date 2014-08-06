@@ -35,7 +35,7 @@ Controller.prototype = {
 				var newPosition = $('.long_grass').position().left - 20
 				$('.long_grass').css('left', newPosition)
 			}
-		})
+		}),
 
 		$(document).keydown(function(){
 			if (event.keyIdentifier == "Left"){
@@ -44,5 +44,6 @@ Controller.prototype = {
 				$('.long_grass').css('left', newPosition)
 			}
 		})
+
   }
 }
