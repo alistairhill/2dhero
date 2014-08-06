@@ -6,7 +6,7 @@ body{
 	height: 350px;
 	width: 50%;
 	margin: 0 auto;
-	background-color: white;
+	background-color: #0082FF;
 	position: relative;
 	overflow: hidden;
 	top: 100px;
@@ -19,4 +19,11 @@ body{
 	position: absolute;
 	left: 0;
 	bottom: 0;
+}
+
+.character {
+	width: 20px;
+	height: 40px;
+	margin: 260px auto;
+	background-color: #444;
 }
