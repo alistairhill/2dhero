@@ -1,0 +1,22 @@
+body{
+	background-color: red;
+}
+
+#game_view {
+	height: 350px;
+	width: 50%;
+	margin: 0 auto;
+	background-color: white;
+	position: relative;
+	overflow: hidden;
+	top: 100px;
+}
+
+.long_grass {
+	width: 10000px;
+	height: 50px;
+	background-image: url('images/longgrass.png');
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
